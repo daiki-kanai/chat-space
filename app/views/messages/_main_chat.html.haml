@@ -1,5 +1,35 @@
-%div.wrapper
-  %div.main-chat
-    %div.main-chat__group-info
-    %div.main-chat__message-list
-    %div.main-chat__message-form
+.wrapper
+  .main-chat
+    .main-chat__group-info
+      .info-block
+        .group-name test
+        .member-name member-name
+      = link_to "#", class: "edit-btn" do
+        Edit
+    .main-chat__message-list
+      .message-block
+        .massage-data
+          .messenger taro
+          .data-and-time 2020/01/01
+        .message hello
+      .message-block
+        .massage-data
+          .messenger taro
+          .data-and-time 2020/01/01
+        .message hello
+      .message-block
+        .massage-data
+          .messenger taro
+          .data-and-time 2020/01/01
+        .message hello
+    .main-chat__message-form
+      .form
+        .message-form type a message
+        %label{class: "photo-attached-icon"}
+          %i.far.fa-image
+          %input{type: "file"}
+      .send-btn Send
+
+  
+
+          

@@ -1,15 +1,21 @@
-%div.wrapper 
-  %div.side-bar
-    %div.side-bar__user-name
-      %div.top-items
-        %div.top-items__name taro
-        %div.top-items__icons
+.wrapper 
+  .side-bar
+    .user-name
+      .top-items
+        .top-items__name taro
+        .top-items__icons
           = link_to "#", class: "icons__btn" do
             %i.far.fa-edit
           = link_to "#", class: "icons__btn" do
             %i.fas.fa-cog
-    %div.side-bar__group-list
-      %div.group
-        %div.group__name like banana
-        %div.group__latest-message hello
+    .side-bar__group-list
+      .group
+        .group__name like banana
+        .group__latest-message hello
+      .group
+        .group__name like apple
+        .group__latest-message hello
+      .group
+        .group__name like potato
+        .group__latest-message hello
 
