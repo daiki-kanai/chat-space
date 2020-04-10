@@ -1,34 +1,34 @@
 .wrapper
-  .mainChat
-    .mainChat__groupInfo
-      .infoBlock
-        .infoBlock__groupName test
-        .infoBlock__memberName member-name
-      = link_to "#", class: "editBtn" do
+  .main-chat
+    .main-chat__group-info
+      .info-block
+        .info-block__group-name test
+        .info-block__member-name member-name
+      = link_to "#", class: "edit-btn" do
         Edit
-    .mainChat__messageList
-      .messageBlock
-        .massageData
-          .massageData__messenger taro
-          .massageData__dataAndTime 2020/01/01
+    .main-chat__message-list
+      .message-block
+        .massage-data
+          .massage-data__messenger taro
+          .massage-data__data-and-time 2020/01/01
         .message hello
-      .messageBlock
-        .massageData
-          .massageData__messenger taro
-          .massageData__dataAndTime 2020/01/01
+      .message-block
+        .massage-data
+          .massage-data__messenger taro
+          .massage-data__data-and-time 2020/01/01
         .message hello
-      .messageBlock
-        .massageData
-          .massageData__messenger taro
-          .massageData__dataAndTime 2020/01/01
+      .message-block
+        .massage-data
+          .massage-data__messenger taro
+          .massage-data__data-and-time 2020/01/01
         .message hello
-    .mainChat__messageForm
+    .main-chat__message-form
       .form
-        .form__messageForm type a message
-        %label{class: "form__photoIcon"}
+        .form__message-form type a message
+        %label.form__photo-icon
           %i.far.fa-image
           %input{type: "file"}
-      .sendBtn Send
+      .send-btn Send
 
   
 
