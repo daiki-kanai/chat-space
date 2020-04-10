@@ -1,3 +1,8 @@
+$blue: #38aef0;
+$white: #ffffff;
+$gray: #333333;
+$lightGray: #999999;
+
 * {
   box-sizing: border-box;
 }
@@ -6,30 +11,27 @@
   height: 100vh;
 }
 
-.side-bar {
+.sideBar {
   width: 300px;
   background-color: #253141;
-  color: #ffffff;
+  color: $white;
   font-weight: bold;
-  .user-name {
+  &__userName {
     height: 100px;
     display: flex;
     align-items: center;
     padding: 0 20px;
-    .top-items {
+    .topItems {
       height: 20px;
       width:260px;
-      display: flex;
-      justify-content: space-between;
-      line-height: 20px;
-      text-align: center;
+      @include items-center;
       &__name {
         font-size: 16px;
       }
       &__icons {
         width: 60px;
         .icons__btn {
-          color: #ffffff;
+          color: $white;
           text-decoration: none;
           float: right;
           margin-left: 5px;
@@ -37,7 +39,7 @@
       }
     }
   }
-  &__group-list {
+  &__groupList {
     height: calc(100% - 100px);
     background-color: #2f3e51;
     .group {
@@ -46,7 +48,7 @@
         font-size: 15px;
         margin-bottom: 5px;
       }
-      &__latest-message {
+      &__latestMessage {
         font-size: 11px;
         margin-bottom: 40px;
       }
@@ -54,55 +56,54 @@
   }
 }
 
-.main-chat {
+.mainChat {
   width: calc(100vw - 300px);
-  background-color: #ffffff;
-  &__group-info {
+  background-color: $white;
+  &__groupInfo {
     height: 100px;
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
-    .info-block {
+    .infoBlock {
       margin: 35px 0 0 40px;
-      .group-name {
-        color: #333333;
+      &__groupName {
+        color: $gray;
         font-size: 20px;
         margin-bottom: 15px;
       }
-      .member-name {
-        color: #999999;
+      &__memberName {
+        color: $lightGray;
         font-size: 12px;
       }
     }
-    .edit-btn {
-      color: #38aef0;
+    .editBtn {
+      color: $blue;
       font-size: 16px;
       height: 40px;
       width: 72px;
       padding: 0 20px;
       margin: 28px 40px 0 0;
       text-decoration: none;
-      border: 1px solid #38aef0;
+      border: 1px solid $blue;
       line-height: 40px;
       text-align: center;
     }
   }
-  &__message-list {
+  &__messageList {
     height: calc(100% - 100px - 90px);
     background-color: #fafafa;
-    padding-top: 35px;
-    padding-left: 40px;
-    .message-block {
+    padding: 35px 0 0 40px;
+    .messageBlock {
       padding-bottom: 46px;
-      .massage-data {
+      .massageData {
         display: flex;
         padding-bottom: 12px;
-        .messenger {
-          color: #333333;
+        &__messenger {
+          color: $gray;
           font-size: 16px;
         }
-        .data-and-time {
-          color: #999999;
+        &__dataAndTime {
+          color: $lightGray;
           font-size: 12px;
           margin-left: 10px;
         }
@@ -113,35 +114,28 @@
       }
     }
   }
-  &__message-form {
+  &__messageForm {
     height: 90px;
     background-color: #d2d2d2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 40px;
+    @include items-center;
     .form {
-      background-color: white;
+      background-color: $white;
       height: 50px;
       width: calc(100vw - 300px - 195px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include items-center;
       padding: 0 10px;
-      .message-form {
-
-      }
-      .photo-attached-icon {
+      &__photoIcon {
         input {
           display: none;
         }
       }
    }
-    .send-btn {
+    .sendBtn {
       width: 100px;
       height: 50px;
-      background-color: #38aef0;
-      color: white;
+      background-color: $blue;
+      color: $white;
       text-decoration: none;
       line-height: 50px;
       text-align: center;
