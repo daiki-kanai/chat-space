@@ -1,0 +1,35 @@
+.wrapper
+  .main-chat
+    .main-chat__group-info
+      .info-block
+        .info-block__group-name test
+        .info-block__member-name member-name
+      = link_to "#", class: "edit-btn" do
+        Edit
+    .main-chat__message-list
+      .message-block
+        .massage-data
+          .massage-data__messenger taro
+          .massage-data__data-and-time 2020/01/01
+        .message hello
+      .message-block
+        .massage-data
+          .massage-data__messenger taro
+          .massage-data__data-and-time 2020/01/01
+        .message hello
+      .message-block
+        .massage-data
+          .massage-data__messenger taro
+          .massage-data__data-and-time 2020/01/01
+        .message hello
+    .main-chat__message-form
+      .form
+        .form__message-form type a message
+        %label.form__photo-icon
+          %i.far.fa-image
+          %input{type: "file"}
+      .send-btn Send
+
+  
+
+          

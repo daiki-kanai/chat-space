@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.side-bar {
+  width: 300px;
+  background-color: #253141;
+  color: $white;
+  font-weight: bold;
+  &__user-name {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    .top-items {
+      height: 20px;
+      width:260px;
+      @include items-center;
+      &__name {
+        font-size: 16px;
+      }
+      &__icons {
+        width: 60px;
+        .icons__btn {
+          color: $white;
+          text-decoration: none;
+          float: right;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  &__group-list {
+    height: calc(100% - 100px);
+    background-color: #2f3e51;
+    .group {
+      padding: 20px;
+      &__name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__latest-message {
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.main-chat {
+  width: calc(100vw - 300px);
+  background-color: $white;
+  &__group-info {
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    .info-block {
+      margin: 35px 0 0 40px;
+      &__group-name {
+        color: $gray;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      &__member-name {
+        color: $lightGray;
+        font-size: 12px;
+      }
+    }
+    .edit-btn {
+      color: $blue;
+      font-size: 16px;
+      height: 40px;
+      width: 72px;
+      padding: 0 20px;
+      margin: 28px 40px 0 0;
+      text-decoration: none;
+      border: 1px solid $blue;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
+  &__message-list {
+    height: calc(100% - 100px - 90px);
+    background-color: #fafafa;
+    padding: 35px 0 0 40px;
+    .message-block {
+      padding-bottom: 46px;
+      .massage-data {
+        display: flex;
+        padding-bottom: 12px;
+        &__messenger {
+          color: $gray;
+          font-size: 16px;
+        }
+        &__data-and-time {
+          color: $lightGray;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      .message {
+        color: #434A54;
+        font-size: 14px;
+      }
+    }
+  }
+  &__message-form {
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 0 40px;
+    @include items-center;
+    .form {
+      background-color: $white;
+      height: 50px;
+      width: calc(100vw - 300px - 195px);
+      @include items-center;
+      padding: 0 10px;
+      &__photo-icon {
+        input {
+          display: none;
+        }
+      }
+   }
+    .send-btn {
+      width: 100px;
+      height: 50px;
+      background-color: $blue;
+      color: $white;
+      text-decoration: none;
+      line-height: 50px;
+      text-align: center;
+    }
+  }
+}
