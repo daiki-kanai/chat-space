@@ -6,9 +6,10 @@
           = current_user.name
         .top-items__icons
           = link_to "#", class: "icons__btn" do
-            %i.far.fa-edit
-          = link_to "edit_user_path(current_user)", class: "icons__btn" do
             %i.fas.fa-cog
+          = link_to edit_user_path(current_user), class: "icons__btn" do
+            %i.far.fa-edit
+
     .side-bar__group-list
       .group
         .group__name like banana
