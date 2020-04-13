@@ -39,11 +39,16 @@
     background-color: #2f3e51;
     .group {
       padding: 20px;
+    .group-link {
+      text-decoration: none;
+    }
       &__name {
         font-size: 15px;
         margin-bottom: 5px;
+        color: $white;
       }
       &__latest-message {
+        color: $white;
         font-size: 11px;
         margin-bottom: 40px;
       }
