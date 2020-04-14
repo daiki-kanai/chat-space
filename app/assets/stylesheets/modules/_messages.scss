@@ -93,6 +93,7 @@
     height: calc(100% - 100px - 90px);
     background-color: #fafafa;
     padding: 35px 0 0 40px;
+    overflow: scroll;
     .message-block {
       padding-bottom: 46px;
       .massage-data {

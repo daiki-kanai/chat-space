@@ -7,21 +7,7 @@
       = link_to "#", class: "edit-btn" do
         Edit
     .main-chat__message-list
-      .message-block
-        .massage-data
-          .massage-data__messenger taro
-          .massage-data__data-and-time 2020/01/01
-        .message hello
-      .message-block
-        .massage-data
-          .massage-data__messenger taro
-          .massage-data__data-and-time 2020/01/01
-        .message hello
-      .message-block
-        .massage-data
-          .massage-data__messenger taro
-          .massage-data__data-and-time 2020/01/01
-        .message hello
+      = render @messages
     .main-chat__message-form
       = form_for [@group, @message] do |f|
         .form-box
