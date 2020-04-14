@@ -2,9 +2,13 @@
   .main-chat
     .main-chat__group-info
       .info-block
-        .info-block__group-name test
-        .info-block__member-name member-name
-      = link_to "#", class: "edit-btn" do
+        .info-block__group-name
+          = @group.name
+        .info-block__member-name
+          Member : 
+          - @group.users.each do |user|  
+            = user.name
+      = link_to edit_group_path(@group), class: "edit-btn" do
         Edit
     .main-chat__message-list
       = render @messages
