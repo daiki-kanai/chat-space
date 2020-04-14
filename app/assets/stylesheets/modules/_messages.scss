@@ -117,28 +117,44 @@
   &__message-form {
     height: 90px;
     background-color: #d2d2d2;
-    padding: 0 40px;
-    @include items-center;
-    .form {
-      background-color: $white;
-      height: 50px;
-      width: calc(100vw - 300px - 195px);
-      @include items-center;
-      padding: 0 10px;
-      &__photo-icon {
-        input {
-          display: none;
+    padding: 20px 40px;
+    .form-box {
+      display: flex;
+      .form {
+        background-color: $white;
+        width: calc(100vw - 300px - 195px);
+        .text-box {
+          position: relative;
+          width: 100%;
+          .message-form {
+            height: 50px;
+            width: 100%;
+            padding: 0 40px 0 10px;
+            border-style: none;
+          }
+          .photo-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            .hidden {
+              display: none;
+            }
+          }
         }
       }
-   }
-    .send-btn {
-      width: 100px;
-      height: 50px;
-      background-color: $blue;
-      color: $white;
-      text-decoration: none;
-      line-height: 50px;
-      text-align: center;
+      .send-btn {
+        width: 100px;
+        height: 50px;
+        background-color: $blue;
+        color: $white;
+        text-decoration: none;
+        line-height: 50px;
+        text-align: center;
+        margin-left: 15px;
+      }
+  
     }
   }
 }

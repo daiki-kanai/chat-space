@@ -23,13 +23,12 @@
           .massage-data__data-and-time 2020/01/01
         .message hello
     .main-chat__message-form
-      .form
-        .form__message-form type a message
-        %label.form__photo-icon
-          %i.far.fa-image
-          %input{type: "file"}
-      .send-btn Send
-
-  
-
-          
+      = form_for [@group, @message] do |f|
+        .form-box
+          .form
+            .text-box
+              = f.text_field :body, class: 'message-form', placeholder: 'type a message'
+              = f.label :image, class: 'photo-icon' do
+                %i.far.fa-image
+                = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'send-btn'
