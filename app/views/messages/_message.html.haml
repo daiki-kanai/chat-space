@@ -1,0 +1,11 @@
+.message-block
+  .massage-data
+    .massage-data__messenger
+      = message.user.name
+    .massage-data__data-and-time
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .message
+    - if message.body.present?
+      %p.message__content
+        = message.body
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
