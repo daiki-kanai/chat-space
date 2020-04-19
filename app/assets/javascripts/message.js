@@ -1,5 +1,4 @@
 $(function() {
-
   function buildHTML(message){
     if ( message.image ) {
       var html =
@@ -40,7 +39,6 @@ $(function() {
       return html;
     };
   }
-
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -55,9 +53,9 @@ $(function() {
     })
     .done(function(data) {
       var html = buildHTML(data);
-
-      console.log(data);
+      $('.main-chat__message-list').append(html);
+      $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});
+      $('form')[0].reset();
     })
-    
-  })
+})
 });
