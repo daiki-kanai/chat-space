@@ -1,7 +1,46 @@
 $(function() {
 
+  function buildHTML(message){
+    if ( message.image ) {
+      var html =
+       `<div class="message-block">
+          <div class="message-data">
+            <div class="message-data__messenger">
+              ${message.user_name}
+            </div>
+            <div class="message-data__data-and-time">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="message">
+            <p class="message__content">
+              ${message.body}
+            </p>
+          </div>
+          <img src=${message.image} >
+        </div>`
+      return html;
+    } else {
+      var html =
+       `<div class="message-block">
+          <div class="message-data">
+            <div class="message-data__messenger">
+              ${message.user_name}
+            </div>
+            <div class="message-data__data-and-time">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="message">
+            <p class="message__content">
+              ${message.body}
+            </p>
+          </div>
+        </div>`
+      return html;
+    };
+  }
 
-  
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -16,6 +55,9 @@ $(function() {
     })
     .done(function(data) {
       var html = buildHTML(data);
+
+      console.log(data);
     })
+    
   })
 });
