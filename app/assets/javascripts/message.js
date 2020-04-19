@@ -56,6 +56,7 @@ $(function() {
       $('.main-chat__message-list').append(html);
       $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});
       $('form')[0].reset();
+      $('.send-btn').prop('disabled', false);
     })
 })
 });
