@@ -37,6 +37,8 @@
   &__group-list {
     height: calc(100% - 100px);
     background-color: #2f3e51;
+    overflow: scroll;
+
     .group {
       padding: 20px;
     .group-link {
