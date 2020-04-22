@@ -10,7 +10,6 @@
   width: 300px;
   background-color: #253141;
   color: $white;
-  font-weight: bold;
   &__user-name {
     height: 100px;
     display: flex;
@@ -20,6 +19,7 @@
       height: 20px;
       width:260px;
       @include items-center;
+      font-weight: bold;
       &__name {
         font-size: 16px;
       }
@@ -38,9 +38,9 @@
     height: calc(100% - 100px);
     background-color: #2f3e51;
     overflow: scroll;
-
+    padding: 20px 20px 0;
     .group {
-      padding: 20px;
+      margin-bottom: 40px;
     .group-link {
       text-decoration: none;
     }
